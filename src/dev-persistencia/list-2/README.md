@@ -18,7 +18,7 @@ byte[] buffer = new byte[8192];
 fis.read(buffer);
 ```
 
-- Comparar o tempo de cópia de arquivos grandes usando a Questão 1 e a Questão 2.
+- Comparação de tempo de cópia de arquivos grandes usando a v1 e a  v2.
 
 ```sh
 - tempo de leitura do arquivo 'metadata.txt'
