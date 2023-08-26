@@ -33,7 +33,7 @@ public class FileCopyAppV3 {
             long endTime = System.currentTimeMillis();
             long totalTime = endTime - startTime;
 
-            System.out.println("Conversão e cópia bem sucedidas! Tempo total: " + totalTime + " ms");
+            System.out.println("Conversão e copia bem sucedidas! Tempo total: " + totalTime + " ms");
         } catch (IOException e) {
             System.err.println("Erro durante a conversão e cópia do arquivo: " + e.getMessage());
         }
