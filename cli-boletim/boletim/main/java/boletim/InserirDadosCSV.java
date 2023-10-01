@@ -17,16 +17,16 @@ public class InserirDadosCSV {
 				scanner.nextLine();
         System.out.println("Informe o nome do boletim informativo:");
         String nomeBoletim = scanner.nextLine();
-        System.out.println("Informe a frequência de atualização (semanalmente, diariamente, intervalo de tempo):");
+        System.out.println("Informe a frequencia de atualizacao (semanalmente, diariamente, intervalo de tempo):");
         String frequenciaAtualizacao = scanner.nextLine();
         System.out.println("Informe a categoria do boletim informativo:");
         String categoria = scanner.nextLine();
 
         Boletim boletim = new Boletim(idBoletim, nomeBoletim, frequenciaAtualizacao, categoria);
 
-        System.out.println("Informe o título do post:");
+        System.out.println("Informe o titulo do post:");
         String tituloPost = scanner.nextLine();
-        System.out.println("Informe o conteúdo do post (em markdown):");
+        System.out.println("Informe o conteudo do post (em markdown):");
         String conteudoPost = scanner.nextLine();
 
         Post post = new Post(1, tituloPost, boletim.getId(), conteudoPost);
@@ -45,7 +45,7 @@ public class InserirDadosCSV {
 	
 					if (!Files.exists(arquivoCSV)) {
 							// Se o arquivo não existe, adicione o cabeçalho
-							linhasCSV.add("ID_Boletim,Nome,Frequencia,Categoria,ID_Post,Titulo,Conteudo");
+							linhasCSV.add("id_boletim,nome,frequencia,categoria,id_post,titulo,conteudo");
 					}
 					
 					linhasCSV.add(linha);

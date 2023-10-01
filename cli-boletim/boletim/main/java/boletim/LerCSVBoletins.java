@@ -52,21 +52,21 @@ public class LerCSVBoletins {
                     String[] partes = linha.split(",");
                     System.out.println("ID: " + partes[0]);
                     System.out.println("Nome: " + partes[1]);
-                    System.out.println("Frequência: " + partes[2]);
+                    System.out.println("Frequencia: " + partes[2]);
                     System.out.println("Categoria: " + partes[3]);
                     System.out.println("ID do Post: " + partes[4]);
-                    System.out.println("Título do Post: " + partes[5]);
-                    System.out.println("Conteúdo do Post: " + partes[6]);
+                    System.out.println("Titulo do Post: " + partes[5]);
+                    System.out.println("Conteudo do Post: " + partes[6]);
                     System.out.println("*********************************");
                     contador++;
                 }
 
-                System.out.println("Página " + pagina);
-                System.out.println("Opções:");
-                System.out.println("1. Próxima Página");
-                System.out.println("2. Página Anterior");
-                System.out.println("0. Sair");
-                System.out.print("Escolha uma opção: ");
+                System.out.println("pagina " + pagina);
+                System.out.println("opcoes:");
+                System.out.println("1. avancar");
+                System.out.println("2. voltar");
+                System.out.println("0. sair");
+                System.out.print("escolha uma opcao: ");
                 opcao = scanner.nextInt();
                 scanner.nextLine(); // Limpa o buffer
 

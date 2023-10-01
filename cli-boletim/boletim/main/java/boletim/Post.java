@@ -13,8 +13,6 @@ class Post {
         this.conteudo = conteudo;
     }
 
-    // Getters e Setters
-
     public int getId() {
         return id;
     }

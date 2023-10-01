@@ -11,7 +11,7 @@ public class CompactarCSVParaZip {
 
         compactarParaZIP(arquivoCSV, arquivoZIP);
 
-        System.out.println("Compactação concluída: " + arquivoZIP);
+        System.out.println("compactacao concluida");
     }
 
     public static void compactarParaZIP(String arquivoOrigem, String arquivoDestino) {

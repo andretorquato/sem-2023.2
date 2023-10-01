@@ -12,7 +12,7 @@ public class Menu {
         do {
             clearScreen();
             System.out.println("*********************************");
-            System.out.println("*           Menu Principal      *");
+            System.out.println("*           CLI Boletim         *");
             System.out.println("*********************************");
             for (int i = 1; i <= 5; i++) {
                 if (i == selectedItem) {
@@ -23,25 +23,25 @@ public class Menu {
 
                 switch (i) {
                     case 1:
-                        System.out.println("* F1. Inserir novo Boletim no   *");
+                        System.out.println("* 1. Inserir novo Boletim no   *");
                         System.out.println("*     arquivo CSV              *");
                         break;
                     case 2:
-                        System.out.println("* F2. Mostrar a quantidade de   *");
+                        System.out.println("* 2. Mostrar a quantidade de   *");
                         System.out.println("*     entidades existentes no  *");
                         System.out.println("*     arquivo CSV              *");
                         break;
                     case 3:
-                        System.out.println("* F3. Converter os dados do    *");
+                        System.out.println("* 3. Converter os dados do     *");
                         System.out.println("*     arquivo CSV              *");
                         break;
                     case 4:
-                        System.out.println("* F4. Compactar o arquivo CSV  *");
+                        System.out.println("* 4. Compactar o arquivo CSV  *");
                         System.out.println("*     e gerar um novo arquivo *");
-                        System.out.println("*     ZIP                      *");
+                        System.out.println("*     ZIP                     *");
                         break;
                     case 5:
-                        System.out.println("* F5. Mostrar na tela o hash   *");
+                        System.out.println("* 5. Mostrar na tela o hash   *");
                         System.out.println("*     SHA256 do arquivo CSV   *");
                         break;
                 }
@@ -80,20 +80,20 @@ public class Menu {
     private static void performMenuAction(int escolha) {
         switch (escolha) {
             case 1:
-                System.out.println("Você escolheu F1 - Inserir novo Boletim no arquivo CSV");
+                System.out.println("Inserir novo Boletim no arquivo CSV");
                 InserirDadosCSV.inserir();
                 break;
             case 2:
-                System.out.println("Você escolheu F2 - Mostrar a quantidade de entidades existentes no arquivo CSV");
+                System.out.println("Mostrar a quantidade de entidades existentes no arquivo CSV");
                 LerCSVBoletins.ler();
                 break;
             case 3:
-                System.out.println("Você escolheu F3 - Converter os dados do arquivo CSV");
+                System.out.println("Converter os dados do arquivo CSV");
                 int escolhaF3 = -1;
                 do {
                     clearScreen();
                     System.out.println("*********************************");
-                    System.out.println("*   Conversão de Dados         *");
+                    System.out.println("*   Conversao de Dados         *");
                     System.out.println("*********************************");
                     for (int i = 1; i <= 2; i++) {
                         if (i == escolhaF3) {
@@ -103,10 +103,10 @@ public class Menu {
                         }
                         switch (i) {
                             case 1:
-                                System.out.println("* F3.1 Gerar JSON              *");
+                                System.out.println("* 1 Gerar JSON              *");
                                 break;
                             case 2:
-                                System.out.println("* F3.2 Gerar XML               *");
+                                System.out.println("* 2 Gerar XML               *");
                                 break;
                         }
                         if (i == escolhaF3) {
@@ -117,28 +117,30 @@ public class Menu {
                     }
                     System.out.println("* 0. Voltar ao menu principal  *");
                     System.out.println("*********************************");
-                    System.out.print("Escolha uma opção: ");
+                    System.out.print("Escolha uma opcao: ");
                     escolhaF3 = new Scanner(System.in).nextInt();
                     if (escolhaF3 == 0) {
                         break;
                     }
                 } while (escolhaF3 < 1 || escolhaF3 > 2);
                 if (escolhaF3 == 1) {
-                    System.out.println("Você escolheu F3.1 - Gerar JSON");
+                    System.out.println("1 - Gerar JSON");
+                    SerializaJSON.serializar();
                 } else if (escolhaF3 == 2) {
-                    System.out.println("Você escolheu F3.2 - Gerar XML");
+                    System.out.println("2 - Gerar XML");
+                    SerializaXML.serializar();
                 }
                 break;
             case 4:
-                System.out.println("Você escolheu F4 - Compactar o arquivo CSV e gerar um novo arquivo ZIP");
+                System.out.println("4 - Compactar o arquivo CSV e gerar um novo arquivo ZIP");
                 CompactarCSVParaZip.compactar();
                 break;
             case 5:
-                System.out.println("Você escolheu F5 - Mostrar na tela o hash SHA256 do arquivo CSV");
+                System.out.println("5 - Mostrar na tela o hash SHA256 do arquivo CSV");
                 CalcularHashSHA256.calcular();
                 break;
             case 0:
-                System.out.println("Saindo do programa. Até logo!");
+                System.out.println("exit.");
                 break;
         }
     }

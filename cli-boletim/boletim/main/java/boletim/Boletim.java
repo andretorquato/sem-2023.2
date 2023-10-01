@@ -3,10 +3,16 @@ package boletim;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
+
 class Boletim {
+	@JacksonXmlProperty(localName = "id")
 	private int id;
+	@JacksonXmlProperty(localName = "nome")
 	private String nome;
+	@JacksonXmlProperty(localName = "frequenciaAtualizacao")
 	private String frequenciaAtualizacao;
+	@JacksonXmlProperty(localName = "categoria")
 	private String categoria;
 	private List<Post> posts;
 
